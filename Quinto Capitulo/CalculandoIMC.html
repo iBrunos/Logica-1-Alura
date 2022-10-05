@@ -8,31 +8,45 @@
 </head>
 <script>
 
-    function pulaLinha(){
+
+
+    function pulaLinha() {
+
         document.write("<br>");
         document.write("<br>");
-    }
+}
 
     function mostra(frase) {
+
         document.write(frase);
         pulaLinha();
-    }
+}
 
-    function calculaImc(altura,peso) {
+    function calculaImc(altura, peso) {
 
-        var imc = peso / (altura * altura);
-        mostra(" O imc calculado é "+ imc);
-        
-    }
+        return peso / (altura * altura);
+}
 
-    var pesoFlavio = 73;
-    var alturaFlavio = 1.71;
-    calculaImc(1.71, 73);
+var nome = prompt("Informe o seu nome");
+var alturaInformada = prompt(nome + ", informe sua altura");
+var pesoInformado = prompt(nome + ", informe seu peso");
 
+var imc = calculaImc(alturaInformada, pesoInformado);
 
-    var pesoAmigo = 68;
-    var alturaAmigo = 1.72;
-    calculaImc(1.72, 68);
+document.write(nome + ", o seu IMC é " + imc);
+    
+if(imc < 18.5) {
+    mostra("Você está abaixo do recomendado")
+
+    };
+if(imc < 18.5) {
+    mostra("Você está abaixo do recomendado");
+
+};
+
+if(imc >= 18.5 && imc <=35) {
+        mostra("Seu IMC está excelente!");
+};
 
 </script>
 
